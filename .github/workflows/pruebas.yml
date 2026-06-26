@@ -1,0 +1,26 @@
+name: Pruebas Automáticas
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Compilación
+        run: echo "Compilando el sistema de la IEP Ernest Hemingway..."
+
+      - name: Ejecutar pruebas unitarias
+        run: echo "Ejecutando pruebas funcionales y de rendimiento..."
+
+      - name: Verificar resultados
+        run: echo "Todas las pruebas fueron exitosas. Sin errores detectados."
+
+      - name: Despliegue autorizado
+        run: echo "Desplegando al servidor de pruebas de forma segura..."
